@@ -28,9 +28,10 @@ public class ModernizrBrowserDto
 
 	private Boolean htmlimports;
 	private Boolean applicationcache;
-	private Boolean blobconstructor;
+	@JsonProperty(value = "blobconstructor")
+	private Boolean blobconstructorOld;
 	@JsonProperty(value = "blob-constructor")
-	private Boolean blob_constructor;
+	private Boolean blobConstructor;
 	private Boolean cookies;
 	private Boolean cors;
 	private Boolean customprotocolhandler;
@@ -61,7 +62,7 @@ public class ModernizrBrowserDto
 	 */
 	public ModernizrBrowserDto()
 	{
-
+		//No config needed
 	}
 
 	/**
@@ -109,19 +110,19 @@ public class ModernizrBrowserDto
 	 *
 	 * @return
 	 */
-	public Boolean isBlobconstructor()
+	public Boolean isBlobConstructorOld()
 	{
-		return blobconstructor;
+		return blobconstructorOld;
 	}
 
 	/**
 	 * Test result for Blob Constructor
 	 *
-	 * @param blobconstructor
+	 * @param blobconstructorOld
 	 */
-	protected void setBlobconstructor(Boolean blobconstructor)
+	protected void setBlobconstructorOld(Boolean blobconstructorOld)
 	{
-		this.blobconstructor = blobconstructor;
+		this.blobconstructorOld = blobconstructorOld;
 	}
 
 	/**
@@ -131,17 +132,17 @@ public class ModernizrBrowserDto
 	 */
 	public Boolean isBlobConstructor()
 	{
-		return blob_constructor;
+		return blobConstructor;
 	}
 
 	/**
 	 * Test result for Blob Constructor
 	 *
-	 * @param blob_constructor
+	 * @param blobConstructor
 	 */
-	protected void setBlobConstructor(Boolean blob_constructor)
+	protected void setBlobConstructor(Boolean blobConstructor)
 	{
-		this.blob_constructor = blob_constructor;
+		this.blobConstructor = blobConstructor;
 	}
 
 	/**

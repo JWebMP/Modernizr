@@ -35,9 +35,10 @@ public class ModernizrCapabilitiesDto extends ModernizrBrowserDto
 	private Boolean cssgradients;
 	private Boolean opacity;
 	private Boolean csspositionsticky;
-	private Boolean createelementattrs;
+	@JsonProperty(value = "createelementattrs")
+	private Boolean createelementattrsOld;
 	@JsonProperty(value = "createelement-attrs")
-	private Boolean createelement_attrs;
+	private Boolean createelementAttrs;
 	private Boolean dataset;
 	private Boolean csschunit;
 	private Boolean cssexunit;
@@ -52,9 +53,10 @@ public class ModernizrCapabilitiesDto extends ModernizrBrowserDto
 	private Boolean unicoderange;
 	private Boolean unicode;
 	private Boolean checked;
-	private Boolean displaytable;
+	@JsonProperty(value = "displaytable")
+	private Boolean displaytableOld;
 	@JsonProperty(value = "display-table")
-	private Boolean display_table;
+	private Boolean displayTable;
 	private Boolean fontface;
 	private Boolean generatedcontent;
 	private Boolean hairline;
@@ -69,7 +71,7 @@ public class ModernizrCapabilitiesDto extends ModernizrBrowserDto
 
 	public ModernizrCapabilitiesDto()
 	{
-
+		//Nothing needed
 	}
 
 	/**
@@ -257,19 +259,19 @@ public class ModernizrCapabilitiesDto extends ModernizrBrowserDto
 	 *
 	 * @return
 	 */
-	public Boolean isCreateelementattrs()
+	public Boolean isCreateelementattrsOld()
 	{
-		return createelementattrs;
+		return createelementattrsOld;
 	}
 
 	/**
 	 * Is create element attributes allowed
 	 *
-	 * @param createelementattrs
+	 * @param createelementattrsOld
 	 */
-	protected void setCreateelementattrs(Boolean createelementattrs)
+	protected void setCreateelementattrsOld(Boolean createelementattrsOld)
 	{
-		this.createelementattrs = createelementattrs;
+		this.createelementattrsOld = createelementattrsOld;
 	}
 
 	/**
@@ -279,17 +281,17 @@ public class ModernizrCapabilitiesDto extends ModernizrBrowserDto
 	 */
 	public Boolean isCreateelementAttrs()
 	{
-		return createelement_attrs;
+		return createelementAttrs;
 	}
 
 	/**
 	 * Sets if create element attrs are allowed
 	 *
-	 * @param createelement_attrs
+	 * @param createelementattrs
 	 */
-	protected void setCreateelementAttrs(Boolean createelement_attrs)
+	protected void setCreateelementAttrs(Boolean createelementattrs)
 	{
-		this.createelement_attrs = createelement_attrs;
+		this.createelementAttrs = createelementattrs;
 	}
 
 	/**
@@ -577,19 +579,19 @@ public class ModernizrCapabilitiesDto extends ModernizrBrowserDto
 	 *
 	 * @return
 	 */
-	public Boolean isDisplaytable()
+	public Boolean isDisplaytableOld()
 	{
-		return displaytable;
+		return displaytableOld;
 	}
 
 	/**
 	 * Sets if display tables are allowed
 	 *
-	 * @param displaytable
+	 * @param displaytableOld
 	 */
-	protected void setDisplaytable(Boolean displaytable)
+	protected void setDisplaytableOld(Boolean displaytableOld)
 	{
-		this.displaytable = displaytable;
+		this.displaytableOld = displaytableOld;
 	}
 
 	/**
@@ -599,17 +601,17 @@ public class ModernizrCapabilitiesDto extends ModernizrBrowserDto
 	 */
 	public Boolean isDisplayTable()
 	{
-		return display_table;
+		return displayTable;
 	}
 
 	/**
 	 * If display table is allowed
 	 *
-	 * @param display_table
+	 * @param displayTable
 	 */
-	protected void setDisplayTable(Boolean display_table)
+	protected void setDisplayTable(Boolean displayTable)
 	{
-		this.display_table = display_table;
+		this.displayTable = displayTable;
 	}
 
 	/**

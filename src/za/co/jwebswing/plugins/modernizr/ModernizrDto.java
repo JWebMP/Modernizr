@@ -31,7 +31,7 @@ public class ModernizrDto extends ModernizrJSDto
 	private ModernizrInputTypesDto inputtypes;
 
 	@JsonProperty("_version")
-	private String _version;
+	private String version;
 	
 	private Boolean cssvmaxunit;
 	private Boolean cssvminunit;
@@ -41,9 +41,10 @@ public class ModernizrDto extends ModernizrJSDto
 	private Boolean pointerevents;
 	private Boolean fileinputdirectory;
 	private Boolean textshadow;
-	private Boolean batteryapi;
+	@JsonProperty(value = "batteryapi")
+	private Boolean batteryapiOld;
 	@JsonProperty(value = "battery-api")
-	private Boolean battery_api;
+	private Boolean batteryApi;
 	private Boolean crypto;
 	private Boolean dart;
 	private Boolean forcetouch;
@@ -62,9 +63,10 @@ public class ModernizrDto extends ModernizrJSDto
 	private Boolean lowbattery;
 	private Boolean getrandomvalues;
 	private Boolean backgroundblendmode;
-	private Boolean objectfit;
+	@JsonProperty(value = "objectfit")
+	private Boolean objectfitOld;
 	@JsonProperty(value = "object-fit")
-	private Boolean object_fit;
+	private Boolean objectFit;
 	private Boolean wrapflow;
 	private Boolean filesystem;
 	private Boolean ligatures;
@@ -83,9 +85,10 @@ public class ModernizrDto extends ModernizrJSDto
 	private Boolean boxshadow;
 	private Boolean boxsizing;
 	private Boolean csscolumns;
-	private Boolean displayrunin;
+	@JsonProperty(value = "displayrunin")
+	private Boolean displayruninOld;
 	@JsonProperty(value = "display-runin")
-	private Boolean display_runin;
+	private Boolean displayRunin;
 	private Boolean ellipsis;
 	private Boolean cssfilters;
 	private Boolean flexbox;
@@ -130,16 +133,19 @@ public class ModernizrDto extends ModernizrJSDto
 	private Boolean imgcrossorigin;
 	private Boolean sizes;
 	private Boolean srcset;
-	private Boolean inputformaction;
+	@JsonProperty(value = "inputformaction")
+	private Boolean inputformactionOld;
 	@JsonProperty(value = "input-formaction")
-	private Boolean input_formaction;
-	private Boolean inputformenctype;
+	private Boolean inputFormaction;
+	@JsonProperty(value = "inputformenctype")
+	private Boolean inputformenctypeOld;
 	@JsonProperty(value = "input-formenctype")
-	private Boolean input_formenctype;
+	private Boolean inputFormenctype;
 	private Boolean inputformmethod;
-	private Boolean inputformtarget;
+	@JsonProperty(value = "inputformtarget")
+	private Boolean inputformtargetOld;
 	@JsonProperty(value = "input-formtarget")
-	private Boolean input_formtarget;
+	private Boolean inputFormtarget;
 	private Boolean beacon;
 	private Boolean lowbandwidth;
 	private Boolean eventsource;
@@ -167,9 +173,10 @@ public class ModernizrDto extends ModernizrJSDto
 	private Boolean peerconnection;
 	private Boolean datachannel;
 	private Boolean websocketsbinary;
-	private Boolean atobbtoa;
+	@JsonProperty(value = "atobbtoa")
+	private Boolean atobbtoaOld;
 	@JsonProperty(value = "atob-btoa")
-	private Boolean atob_btoa;
+	private Boolean atobBtoa;
 	private Boolean framed;
 	private Boolean matchmedia;
 	private Boolean sharedworkers;
@@ -207,7 +214,7 @@ public class ModernizrDto extends ModernizrJSDto
 	 */
 	public ModernizrDto()
 	{
-
+		//Nothing needed
 	}
 
 	/**
@@ -415,19 +422,19 @@ public class ModernizrDto extends ModernizrJSDto
 	 *
 	 * @return
 	 */
-	public Boolean isBatteryapi()
+	public Boolean isBatteryapiOld()
 	{
-		return batteryapi;
+		return batteryapiOld;
 	}
 
 	/**
 	 * Is the battery api allowed
 	 *
-	 * @param batteryapi
+	 * @param batteryapiOld
 	 */
-	protected void setBatteryapi(Boolean batteryapi)
+	protected void setBatteryapiOld(Boolean batteryapiOld)
 	{
-		this.batteryapi = batteryapi;
+		this.batteryapiOld = batteryapiOld;
 	}
 
 	/**
@@ -437,17 +444,17 @@ public class ModernizrDto extends ModernizrJSDto
 	 */
 	public Boolean isBatteryApi()
 	{
-		return battery_api;
+		return batteryApi;
 	}
 
 	/**
 	 * Is the battery API allowed
 	 *
-	 * @param battery_api
+	 * @param batteryApi
 	 */
-	protected void setBatteryApi(Boolean battery_api)
+	protected void setBatteryApi(Boolean batteryApi)
 	{
-		this.battery_api = battery_api;
+		this.batteryApi = batteryApi;
 	}
 
 	/**
@@ -815,19 +822,19 @@ public class ModernizrDto extends ModernizrJSDto
 	 *
 	 * @return
 	 */
-	public Boolean isObjectfit()
+	public Boolean isObjectfitOld()
 	{
-		return objectfit;
+		return objectfitOld;
 	}
 
 	/**
 	 * Is object fit allowed
 	 *
-	 * @param objectfit
+	 * @param objectfitOld
 	 */
-	protected void setObjectfit(Boolean objectfit)
+	protected void setObjectfitOld(Boolean objectfitOld)
 	{
-		this.objectfit = objectfit;
+		this.objectfitOld = objectfitOld;
 	}
 
 	/**
@@ -837,17 +844,17 @@ public class ModernizrDto extends ModernizrJSDto
 	 */
 	public Boolean isObjectFit()
 	{
-		return object_fit;
+		return objectFit;
 	}
 
 	/**
 	 * Is object fit allowed
 	 *
-	 * @param object_fit
+	 * @param objectFit
 	 */
-	protected void setObjectFit(Boolean object_fit)
+	protected void setObjectFit(Boolean objectFit)
 	{
-		this.object_fit = object_fit;
+		this.objectFit = objectFit;
 	}
 
 	/**
@@ -1215,19 +1222,19 @@ public class ModernizrDto extends ModernizrJSDto
 	 *
 	 * @return
 	 */
-	public Boolean isDisplayrunin()
+	public Boolean isDisplayruninOld()
 	{
-		return displayrunin;
+		return displayruninOld;
 	}
 
 	/**
 	 * Get display run in
 	 *
-	 * @param displayrunin
+	 * @param displayruninOld
 	 */
-	protected void setDisplayrunin(Boolean displayrunin)
+	protected void setDisplayruninOld(Boolean displayruninOld)
 	{
-		this.displayrunin = displayrunin;
+		this.displayruninOld = displayruninOld;
 	}
 
 	/**
@@ -1237,17 +1244,17 @@ public class ModernizrDto extends ModernizrJSDto
 	 */
 	public Boolean isDisplayRunin()
 	{
-		return display_runin;
+		return displayRunin;
 	}
 
 	/**
 	 * Display run in
 	 *
-	 * @param display_runin
+	 * @param displayRunin
 	 */
-	protected void setDisplayRunin(Boolean display_runin)
+	protected void setDisplayRunin(Boolean displayRunin)
 	{
-		this.display_runin = display_runin;
+		this.displayRunin = displayRunin;
 	}
 
 	/**
@@ -2135,19 +2142,19 @@ public class ModernizrDto extends ModernizrJSDto
 	 *
 	 * @return
 	 */
-	public Boolean isInputformaction()
+	public Boolean isInputformactionOld()
 	{
-		return inputformaction;
+		return inputformactionOld;
 	}
 
 	/**
 	 * Sets if Input Form actions are allowed
 	 *
-	 * @param inputformaction
+	 * @param inputformactionOld
 	 */
-	protected void setInputformaction(Boolean inputformaction)
+	protected void setInputformactionOld(Boolean inputformactionOld)
 	{
-		this.inputformaction = inputformaction;
+		this.inputformactionOld = inputformactionOld;
 	}
 
 	/**
@@ -2157,17 +2164,17 @@ public class ModernizrDto extends ModernizrJSDto
 	 */
 	public Boolean isInputFormaction()
 	{
-		return input_formaction;
+		return inputFormaction;
 	}
 
 	/**
 	 * Sets if input form actions are allowed
 	 *
-	 * @param input_formaction
+	 * @param inputFormaction
 	 */
-	protected void setInputFormaction(Boolean input_formaction)
+	protected void setInputFormaction(Boolean inputFormaction)
 	{
-		this.input_formaction = input_formaction;
+		this.inputFormaction = inputFormaction;
 	}
 
 	/**
@@ -2177,17 +2184,17 @@ public class ModernizrDto extends ModernizrJSDto
 	 */
 	public Boolean isInputformenctype()
 	{
-		return inputformenctype;
+		return inputformenctypeOld;
 	}
 
 	/**
 	 * Sets input form enc types
 	 *
-	 * @param inputformenctype
+	 * @param inputformenctypeOld
 	 */
-	protected void setInputformenctype(Boolean inputformenctype)
+	protected void setInputformenctypeOld(Boolean inputformenctypeOld)
 	{
-		this.inputformenctype = inputformenctype;
+		this.inputformenctypeOld = inputformenctypeOld;
 	}
 
 	/**
@@ -2197,17 +2204,17 @@ public class ModernizrDto extends ModernizrJSDto
 	 */
 	public Boolean isInpuFormEnctype()
 	{
-		return input_formenctype;
+		return inputFormenctype;
 	}
 
 	/**
 	 * Is input form encoding type allowed
 	 *
-	 * @param input_formenctype
+	 * @param inputFormenctype
 	 */
-	protected void setInputFormEnctype(Boolean input_formenctype)
+	protected void setInputFormEnctype(Boolean inputFormenctype)
 	{
-		this.input_formenctype = input_formenctype;
+		this.inputFormenctype = inputFormenctype;
 	}
 
 	/**
@@ -2235,19 +2242,19 @@ public class ModernizrDto extends ModernizrJSDto
 	 *
 	 * @return
 	 */
-	public Boolean isInputformtarget()
+	public Boolean isInputformtargetOld()
 	{
-		return inputformtarget;
+		return inputformtargetOld;
 	}
 
 	/**
 	 * Is input form target allowed
 	 *
-	 * @param inputformtarget
+	 * @param inputformtargetOld
 	 */
-	protected void setInputformtarget(Boolean inputformtarget)
+	protected void setInputformtargetOld(Boolean inputformtargetOld)
 	{
-		this.inputformtarget = inputformtarget;
+		this.inputformtargetOld = inputformtargetOld;
 	}
 
 	/**
@@ -2257,17 +2264,17 @@ public class ModernizrDto extends ModernizrJSDto
 	 */
 	public Boolean isInputFormtarget()
 	{
-		return input_formtarget;
+		return inputFormtarget;
 	}
 
 	/**
 	 * Sets if input form target is allowed
 	 *
-	 * @param input_formtarget
+	 * @param inputFormtarget
 	 */
-	protected void setInputFormtarget(Boolean input_formtarget)
+	protected void setInputFormtarget(Boolean inputFormtarget)
 	{
-		this.input_formtarget = input_formtarget;
+		this.inputFormtarget = inputFormtarget;
 	}
 
 	/**
@@ -2815,19 +2822,19 @@ public class ModernizrDto extends ModernizrJSDto
 	 *
 	 * @return
 	 */
-	public Boolean isAtobbtoa()
+	public Boolean isAtobbtoaOld()
 	{
-		return atobbtoa;
+		return atobbtoaOld;
 	}
 
 	/**
-	 * Is atobbtoa allowed
+	 * Is atobbtoaOld allowed
 	 *
-	 * @param atobbtoa
+	 * @param atobbtoaOld
 	 */
-	protected void setAtobbtoa(Boolean atobbtoa)
+	protected void setAtobbtoaOld(Boolean atobbtoaOld)
 	{
-		this.atobbtoa = atobbtoa;
+		this.atobbtoaOld = atobbtoaOld;
 	}
 
 	/**
@@ -2837,17 +2844,17 @@ public class ModernizrDto extends ModernizrJSDto
 	 */
 	public Boolean isAtobBtoa()
 	{
-		return atob_btoa;
+		return atobBtoa;
 	}
 
 	/**
 	 * Is Atob BTOA is allowed
 	 *
-	 * @param atob_btoa
+	 * @param atobBtoa
 	 */
-	protected void setAtobBtoa(Boolean atob_btoa)
+	protected void setAtobBtoa(Boolean atobBtoa)
 	{
-		this.atob_btoa = atob_btoa;
+		this.atobBtoa = atobBtoa;
 	}
 
 	/**
@@ -3472,11 +3479,11 @@ public class ModernizrDto extends ModernizrJSDto
 	
 	public String getVersion()
 	{
-		return _version;
+		return version;
 	}
 	
-	public void setVersion(String _version)
+	public void setVersion(String version)
 	{
-		this._version = _version;
+		this.version = version;
 	}
 }

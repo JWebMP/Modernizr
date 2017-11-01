@@ -16,6 +16,8 @@
  */
 package za.co.jwebswing.plugins.modernizr;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * The input type DTO
  *
@@ -35,7 +37,8 @@ public class ModernizrInputTypesDto
 	private Boolean month;
 	private Boolean week;
 	private Boolean time;
-	private Boolean datetime_local;
+	@JsonProperty("datetime-local")
+	private Boolean datetimeLocal;
 	private Boolean number;
 	private Boolean range;
 	private Boolean collr;
@@ -233,19 +236,19 @@ public class ModernizrInputTypesDto
 	 *
 	 * @return
 	 */
-	public Boolean getDatetime_local()
+	public Boolean getDatetimeLocal()
 	{
-		return datetime_local;
+		return datetimeLocal;
 	}
 
 	/**
 	 * Sets if the date time local property is supported
 	 *
-	 * @param datetime_local
+	 * @param datetimeLocal
 	 */
-	public void setDatetime_local(Boolean datetime_local)
+	public void setDatetimeLocal(Boolean datetimeLocal)
 	{
-		this.datetime_local = datetime_local;
+		this.datetimeLocal = datetimeLocal;
 	}
 
 	/**

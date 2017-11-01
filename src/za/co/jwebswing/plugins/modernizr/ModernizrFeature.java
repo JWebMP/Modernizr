@@ -33,8 +33,6 @@ public class ModernizrFeature extends Feature<JavaScriptPart, ModernizrFeature> 
 
 	private static final long serialVersionUID = 1L;
 
-	private final Component forComponent;
-
 	/**
 	 * Constructs a new Tooltip ComponentFeatureBase for a component. Adds the tooltip text as the Title attribute to the component
 	 * <p>
@@ -44,14 +42,13 @@ public class ModernizrFeature extends Feature<JavaScriptPart, ModernizrFeature> 
 	public ModernizrFeature(Component forComponent)
 	{
 		super("ModernizrFeature");
-		this.forComponent = forComponent;
+		setComponent(forComponent);
 		getJavascriptReferences().add(ModernizrReferencePool.ModernizrReference.getJavaScriptReference());
-		// getCssReferences().add(JQXReferencePool.Core.getCssReference());
 	}
 	
 	@Override
 	protected void assignFunctionsToComponent()
 	{
-
+		//Nothing needed
 	}
 }

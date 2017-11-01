@@ -75,7 +75,7 @@ public class ModernizrJSDto extends ModernizrCapabilitiesDto
 
 	public ModernizrJSDto()
 	{
-
+		//Nothing needed
 	}
 
 	/**
