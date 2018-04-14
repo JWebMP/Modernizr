@@ -16,7 +16,7 @@
  */
 package za.co.jwebswing.plugins.modernizr;
 
-import za.co.mmagon.jwebswing.base.html.interfaces.GlobalFeatures;
+import com.jwebmp.base.html.interfaces.GlobalFeatures;
 
 /**
  * @author Marc Magon

@@ -16,10 +16,10 @@
  */
 package za.co.jwebswing.plugins.modernizr;
 
-import za.co.mmagon.jwebswing.Component;
-import za.co.mmagon.jwebswing.Feature;
-import za.co.mmagon.jwebswing.base.html.interfaces.GlobalFeatures;
-import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.Component;
+import com.jwebmp.Feature;
+import com.jwebmp.base.html.interfaces.GlobalFeatures;
+import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
 
 /**
  * Adds on a ToolTip, String for custom text using header theme, Div for custom contents
@@ -45,7 +45,7 @@ public class ModernizrFeature extends Feature<JavaScriptPart, ModernizrFeature> 
 		setComponent(forComponent);
 		getJavascriptReferences().add(ModernizrReferencePool.ModernizrReference.getJavaScriptReference());
 	}
-	
+
 	@Override
 	protected void assignFunctionsToComponent()
 	{

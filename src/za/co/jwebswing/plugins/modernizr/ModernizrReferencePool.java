@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -16,10 +16,10 @@
  */
 package za.co.jwebswing.plugins.modernizr;
 
-import za.co.mmagon.jwebswing.base.references.CSSReference;
-import za.co.mmagon.jwebswing.base.references.JavascriptReference;
-import za.co.mmagon.jwebswing.base.servlets.enumarations.RequirementsPriority;
-import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
+import com.jwebmp.base.references.CSSReference;
+import com.jwebmp.base.references.JavascriptReference;
+import com.jwebmp.base.servlets.enumarations.RequirementsPriority;
+import com.jwebmp.base.servlets.interfaces.ReferencePool;
 
 /**
  * Default reference pool structure
@@ -27,22 +27,35 @@ import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
  * @author GedMarc
  * @since 20 Apr 2016
  */
-public enum ModernizrReferencePool implements ReferencePool
+public enum ModernizrReferencePool
+		implements ReferencePool
 {
 	ModernizrReference(new JavascriptReference("Modernizr", 1.0, "bower_components/jwebswing-moderniz/modernizr.js", 10), null);
 
 	private JavascriptReference javaScriptReference;
 	private CSSReference cssReference;
 
-	private ModernizrReferencePool()
+	ModernizrReferencePool()
 	{
 	}
 
-	private ModernizrReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference)
+	ModernizrReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference)
 	{
 		this.javaScriptReference = javaScriptReference;
 		this.javaScriptReference.setPriority(RequirementsPriority.First);
 
+		this.cssReference = cssReference;
+	}
+
+	@Override
+	public CSSReference getCssReference()
+	{
+		return cssReference;
+	}
+
+	@Override
+	public void setCssReference(CSSReference cssReference)
+	{
 		this.cssReference = cssReference;
 	}
 
@@ -56,17 +69,5 @@ public enum ModernizrReferencePool implements ReferencePool
 	public void setJavaScriptReference(JavascriptReference javaScriptReference)
 	{
 		this.javaScriptReference = javaScriptReference;
-	}
-
-	@Override
-	public CSSReference getCssReference()
-	{
-		return cssReference;
-	}
-
-	@Override
-	public void setCssReference(CSSReference cssReference)
-	{
-		this.cssReference = cssReference;
 	}
 }
