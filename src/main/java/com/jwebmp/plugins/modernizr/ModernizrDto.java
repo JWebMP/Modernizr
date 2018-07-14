@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.jwebswing.plugins.modernizr;
+package com.jwebmp.plugins.modernizr;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -24,7 +24,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * @author GedMarc
  * @since Nov 9, 2016
  */
-public class ModernizrDto extends ModernizrJSDto
+public class ModernizrDto
+		extends ModernizrJSDto
 {
 
 	private ModernizrInputDto input;
@@ -32,7 +33,7 @@ public class ModernizrDto extends ModernizrJSDto
 
 	@JsonProperty("_version")
 	private String version;
-	
+
 	private Boolean cssvmaxunit;
 	private Boolean cssvminunit;
 	private Boolean cssvwunit;
@@ -3476,12 +3477,12 @@ public class ModernizrDto extends ModernizrJSDto
 	{
 		this.indexeddbblob = indexeddbblob;
 	}
-	
+
 	public String getVersion()
 	{
 		return version;
 	}
-	
+
 	public void setVersion(String version)
 	{
 		this.version = version;

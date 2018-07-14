@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.jwebswing.plugins.modernizr;
+package com.jwebmp.plugins.modernizr;
 
 import com.jwebmp.base.html.interfaces.GlobalFeatures;
 
@@ -23,7 +23,8 @@ import com.jwebmp.base.html.interfaces.GlobalFeatures;
  * @version 1.0
  * @since 07 Aug 2015
  */
-public interface ModernizrFeatures extends GlobalFeatures
+public interface ModernizrFeatures
+		extends GlobalFeatures
 {
 
 }

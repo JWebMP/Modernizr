@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.jwebswing.plugins.modernizr;
+package com.jwebmp.plugins.modernizr;
 
 import com.jwebmp.Component;
 import com.jwebmp.Feature;
@@ -28,7 +28,9 @@ import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
  * @version 1.0
  * @since 2013/01/16
  */
-public class ModernizrFeature extends Feature<JavaScriptPart, ModernizrFeature> implements ModernizrFeatures, GlobalFeatures
+public class ModernizrFeature
+		extends Feature<JavaScriptPart, ModernizrFeature>
+		implements ModernizrFeatures, GlobalFeatures
 {
 
 	private static final long serialVersionUID = 1L;

@@ -15,8 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package za.co.jwebswing.plugins.modernizr;
-
+package com.jwebmp.plugins.modernizr;
 
 import com.google.inject.Singleton;
 import com.jwebmp.Page;
@@ -40,7 +39,8 @@ import com.jwebmp.plugins.PluginInformation;
 		pluginLastUpdatedDate = "2017/08/28"
 )
 @Singleton
-public class ModernizrPageConfigurator extends PageConfigurator
+public class ModernizrPageConfigurator
+		extends PageConfigurator
 {
 	/**
 	 * Configures the page for this component
