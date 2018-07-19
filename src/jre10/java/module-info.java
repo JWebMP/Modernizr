@@ -8,4 +8,5 @@ module com.jwebmp.plugins.modernizr {
 
 	requires java.validation;
 	requires java.logging;
+	requires com.google.guice;
 }
