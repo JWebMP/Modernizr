@@ -18,9 +18,9 @@
 package com.jwebmp.plugins.modernizr;
 
 import com.google.inject.Singleton;
-import com.jwebmp.Page;
-import com.jwebmp.PageConfigurator;
-import com.jwebmp.plugins.PluginInformation;
+import com.jwebmp.core.Page;
+import com.jwebmp.core.PageConfigurator;
+import com.jwebmp.core.plugins.PluginInformation;
 
 @PluginInformation(pluginName = "JQuery UI Date Time Picker",
 		pluginUniqueName = "jqueryui-datetime-picker",
