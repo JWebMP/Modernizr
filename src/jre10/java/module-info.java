@@ -14,5 +14,5 @@ module com.jwebmp.plugins.modernizr {
 	requires com.google.guice;
 
 	provides IPageConfigurator with ModernizrPageConfigurator;
-
+	opens com.jwebmp.plugins.modernizr to com.fasterxml.jackson.databind,com.jwebmp.core;
 }
