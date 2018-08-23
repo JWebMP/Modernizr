@@ -18,7 +18,6 @@ package com.jwebmp.plugins.modernizr;
 
 import com.jwebmp.core.Component;
 import com.jwebmp.core.Feature;
-import com.jwebmp.core.base.html.interfaces.GlobalFeatures;
 import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 
 /**
@@ -29,8 +28,7 @@ import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
  * @since 2013/01/16
  */
 public class ModernizrFeature
-		extends Feature<JavaScriptPart, ModernizrFeature>
-		implements ModernizrFeatures, GlobalFeatures
+		extends Feature<ModernizrFeature, JavaScriptPart, ModernizrFeature>
 {
 
 	private static final long serialVersionUID = 1L;
