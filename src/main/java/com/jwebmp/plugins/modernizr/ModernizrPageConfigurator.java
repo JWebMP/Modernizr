@@ -45,6 +45,11 @@ public class ModernizrPageConfigurator
 		implements IPageConfigurator
 {
 	/**
+	 * If this configurator is enabled
+	 */
+	private static boolean enabled = true;
+
+	/**
 	 * Configures the page for this component
 	 */
 	public ModernizrPageConfigurator()
@@ -52,10 +57,41 @@ public class ModernizrPageConfigurator
 		//Nothing Needed
 	}
 
+	/**
+	 * Method isEnabled returns the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * <p>
+	 * If this configurator is enabled
+	 *
+	 * @return the enabled (type boolean) of this AngularAnimatedChangePageConfigurator object.
+	 */
+	public static boolean isEnabled()
+	{
+		return ModernizrPageConfigurator.enabled;
+	}
+
+	/**
+	 * Method setEnabled sets the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * <p>
+	 * If this configurator is enabled
+	 *
+	 * @param mustEnable
+	 * 		the enabled of this AngularAnimatedChangePageConfigurator object.
+	 */
+	public static void setEnabled(boolean mustEnable)
+	{
+		ModernizrPageConfigurator.enabled = mustEnable;
+	}
+
 	@NotNull
 	@Override
 	public Page configure(Page page)
 	{
 		return page;
+	}
+
+	@Override
+	public boolean enabled()
+	{
+		return ModernizrPageConfigurator.enabled;
 	}
 }
