@@ -42,7 +42,7 @@ import javax.validation.constraints.NotNull;
 )
 @Singleton
 public class ModernizrPageConfigurator
-		implements IPageConfigurator
+		implements IPageConfigurator<ModernizrPageConfigurator>
 {
 	/**
 	 * If this configurator is enabled
