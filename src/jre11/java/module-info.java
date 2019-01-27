@@ -1,9 +1,3 @@
-import com.jwebmp.core.services.IPageConfigurator;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions;
-import com.jwebmp.plugins.modernizr.ModernizrPageConfigurator;
-import com.jwebmp.plugins.modernizr.implementations.ModernizrExclusionsModule;
-
 module com.jwebmp.plugins.modernizr {
 
 	exports com.jwebmp.plugins.modernizr;
@@ -17,10 +11,10 @@ module com.jwebmp.plugins.modernizr {
 	requires com.google.guice;
 	requires com.jwebmp.guicedinjection;
 
-	provides IPageConfigurator with ModernizrPageConfigurator;
+	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.modernizr.ModernizrPageConfigurator;
 
-	provides IGuiceScanJarExclusions with ModernizrExclusionsModule;
-	provides IGuiceScanModuleExclusions with ModernizrExclusionsModule;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions with com.jwebmp.plugins.modernizr.implementations.ModernizrExclusionsModule;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.modernizr.implementations.ModernizrExclusionsModule;
 
 	opens com.jwebmp.plugins.modernizr to com.fasterxml.jackson.databind, com.jwebmp.core;
 }
