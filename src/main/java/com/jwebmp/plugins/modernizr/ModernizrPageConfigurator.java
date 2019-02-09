@@ -36,8 +36,8 @@ import javax.validation.constraints.NotNull;
 		pluginWikiUrl = "https://github.com/GedMarc/BlankComponentPageConfigurator/wiki",
 		pluginOriginalHomepage = "https://github.com/xdan/datetimepicker",
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/JQueryUIDateTimePicker.jar/download",
-		pluginIconUrl = "jqueryuidatetimepicker.png",
-		pluginIconImageUrl = "jqueryuidatetimepicker.png",
+		pluginIconUrl = "jquidatetimepicker.png",
+		pluginIconImageUrl = "jquidatetimepicker.png",
 		pluginLastUpdatedDate = "2017/08/28"
 )
 @Singleton
