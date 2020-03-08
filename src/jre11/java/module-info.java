@@ -13,7 +13,6 @@ module com.jwebmp.plugins.modernizr {
 
 	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.modernizr.ModernizrPageConfigurator;
 
-	provides com.guicedee.guicedinjection.interfaces.IGuiceScanJarExclusions with com.jwebmp.plugins.modernizr.implementations.ModernizrExclusionsModule;
 	provides com.guicedee.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.modernizr.implementations.ModernizrExclusionsModule;
 
 	opens com.jwebmp.plugins.modernizr to com.fasterxml.jackson.databind, com.jwebmp.core;
