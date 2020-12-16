@@ -30,7 +30,7 @@ import com.jwebmp.core.base.servlets.interfaces.ReferencePool;
 public enum ModernizrReferencePool
 		implements ReferencePool
 {
-	ModernizrReference(new JavascriptReference("Modernizr", 1.0, "bower_components/jwebswing-moderniz/modernizr.js", 10), null);
+	ModernizrReference(new JavascriptReference("Modernizr", 1.0, "modernizr.js", 3), null);
 
 	private JavascriptReference javaScriptReference;
 	private CSSReference cssReference;

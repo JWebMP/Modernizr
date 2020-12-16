@@ -16,8 +16,8 @@
  */
 package com.jwebmp.plugins.modernizr;
 
-import com.jwebmp.core.Component;
 import com.jwebmp.core.Feature;
+import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 
 /**
@@ -28,7 +28,7 @@ import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
  * @since 2013/01/16
  */
 public class ModernizrFeature
-		extends Feature<ModernizrFeature, JavaScriptPart, ModernizrFeature>
+		extends Feature<ModernizrFeature, JavaScriptPart<?>, ModernizrFeature>
 {
 
 
@@ -38,7 +38,7 @@ public class ModernizrFeature
 	 *
 	 * @param forComponent
 	 */
-	public ModernizrFeature(Component forComponent)
+	public ModernizrFeature(IComponentHierarchyBase<?,?> forComponent)
 	{
 		super("ModernizrFeature");
 		setComponent(forComponent);

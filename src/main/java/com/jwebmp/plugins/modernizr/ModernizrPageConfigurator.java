@@ -20,25 +20,30 @@ package com.jwebmp.plugins.modernizr;
 import com.google.inject.Singleton;
 import com.jwebmp.core.Page;
 import com.jwebmp.core.plugins.PluginInformation;
+import com.jwebmp.core.plugins.PluginStatus;
 import com.jwebmp.core.services.IPageConfigurator;
 
 import jakarta.validation.constraints.NotNull;
 
-@PluginInformation(pluginName = "JQuery UI Date Time Picker",
-		pluginUniqueName = "jqueryui-datetime-picker",
-		pluginDescription = "A nice JQuery UI Date Time Picker complete with theme roller capabilities",
-		pluginVersion = "2.4.7",
-		pluginDependancyUniqueIDs = "jquery-ui,jquery",
-		pluginCategories = "Date Time Picker, JQuery UI, Drop Down",
-		pluginSubtitle = "Date and Time for JQuery UI",
-		pluginGitUrl = "https://github.com/xdan/datetimepicker.git",
-		pluginSourceUrl = "https://github.com/GedMarc/JQueryUIDateTimePicker",
-		pluginWikiUrl = "https://github.com/GedMarc/BlankComponentPageConfigurator/wiki",
-		pluginOriginalHomepage = "https://github.com/xdan/datetimepicker",
-		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/JQueryUIDateTimePicker.jar/download",
-		pluginIconUrl = "jquidatetimepicker.png",
-		pluginIconImageUrl = "jquidatetimepicker.png",
-		pluginLastUpdatedDate = "2017/08/28"
+@PluginInformation(pluginName = "Modernizr",
+		pluginUniqueName = "modernizr",
+		pluginDescription = "Provides information about the browser/device capabilities",
+		pluginVersion = "1.0",
+		pluginDependancyUniqueIDs = "jquery",
+		pluginCategories = "jwebmp, modernizr",
+		pluginSubtitle = "Device Capability Detection",
+		pluginGitUrl = "https://modernizr.com/",
+		pluginSourceUrl = "https://github.com/GedMarc/JWebMP-Modernizr",
+		pluginWikiUrl = "https://github.com/GedMarc/JWebMP-Modernizr/wiki",
+		pluginOriginalHomepage = "https://modernizr.com/",
+		pluginDownloadUrl = "https://mvnrepository.com/artifact/com.jwebmp.plugins.javascript/jwebmp-modernizr",
+		pluginIconUrl = "https://modernizr.com/img/logo.svg",
+		pluginIconImageUrl = "https://modernizr.com/img/logo.svg",
+		pluginLastUpdatedDate = "2017/08/28",
+		pluginGroupId = "com.jwebmp.plugins.javascript",
+		pluginArtifactId = "jwebmp-modernizr",
+		pluginModuleName = "com.jwebmp.plugins.modernizr",
+		pluginStatus = PluginStatus.Released
 )
 @Singleton
 public class ModernizrPageConfigurator
