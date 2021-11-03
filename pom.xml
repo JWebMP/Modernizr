@@ -10,7 +10,7 @@
     <groupId>com.jwebmp.plugins.javascript</groupId>
     <artifactId>jwebmp-modernizr</artifactId>
     <packaging>jar</packaging>
-
+    <version>0.0.0_0-SNAPSHOT</version>
     <name>Modernizr</name>
     <description>The JWebSwing implementation for the Modernizr Library</description>
     <url>https://github.com/GedMarc/JWebSwing-Modernizr</url>
